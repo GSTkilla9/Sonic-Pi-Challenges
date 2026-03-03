@@ -66,6 +66,7 @@ end
 
 
 
+
 use_bpm 131
 live_loop :drew do
   use_synth :organ_tonewheel
@@ -127,6 +128,9 @@ end
 sleep 16
 
 live_loop :hey do
-  sample "C:/Users/Drew_Borneman/Documents/Audacity/11 SOUND EFFECTS (High Quality) - RBTrapHipHopRapRemixDubstep - Popular in 2020.wav", amp: 4
-  sleep 1.25
+  sample "C:/Users/Drew_Borneman/Documents/Audacity/11 SOUND EFFECTS (High Quality) - RBTrapHipHopRapRemixDubstep - Popular in 2020.wav", amp: 4, rate: -1, beat_stretch: 4
+  sleep 2
 end
+
+
+
