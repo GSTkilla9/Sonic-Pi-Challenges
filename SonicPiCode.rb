@@ -1,115 +1,36 @@
-use_bpm 131
-live_loop :drew do
-  use_synth :winwood_lead
-  play :e5, amp: 5
-  sleep 0.5
-  play :e4, amp: 5
-  sleep 0.5
-  play :b4, amp: 5
-  sleep 0.5
-  play :e4, amp: 5
-  sleep 0.5
-  play :f5, amp: 5
-  sleep 0.5
-  play :e4, amp: 5
-  sleep 0.5
-  play :b4, amp: 5
-  sleep 0.5
-  play :e4, amp: 5
-  sleep 0.5
-  play :g5, amp: 5
-  sleep 0.5
-  play :e4, amp: 5
-  sleep 0.5
-  play :b4, amp: 5
-  sleep 0.5
-  play :e4, amp: 5
-  sleep 0.5
-  play :b4, amp: 5
-  sleep 0.5
-  play :e4, amp: 5
-  sleep 0.5
-  play :b4, amp: 5
-  sleep 0.5
-  play :e4, amp: 5
-  sleep 0.5
-end
 
+horns = "C:/Users/Drew_Borneman/Documents/Audacity/All Quiet on the Western Front (2022) OST - Remains [Extended].wav"
 
-sleep 8
-
-live_loop :cymbal do
-  sample :drum_cymbal_closed, amp: 3
-  sleep 1
-end
-
-sleep 12
-
-live_loop :bass do
-  sample :drum_bass_hard, amp: 3
-  sleep 1
-end
-
-sleep 16
-
-
-live_loop :strong do
-  sample :ambi_choir, amp: 5
-  sleep 8
-end
-
-
-
-
-
-
-
-
+seperateWays = [:e5,:e4,:b4,:e4,:f5,:e4,:b4,:e4,:g5,:e4,:b4,:e4,:b4,:e4,:b4,:e4,]
+sleepChange = [3,2,1,4,]
+i = 0
 
 
 use_bpm 131
-live_loop :drew do
-  use_synth :organ_tonewheel
-  play :e5, amp: 3
-  sleep 0.5
-  play :e4, amp: 3
-  sleep 0.5
-  play :b4, amp: 3
-  sleep 0.5
-  play :e4, amp: 3
-  sleep 0.5
-  play :f5, amp: 3
-  sleep 0.5
-  play :e4, amp: 3
-  sleep 0.5
-  play :b4, amp: 3
-  sleep 0.5
-  play :e4, amp: 3
-  sleep 0.5
-  play :g5, amp: 3
-  sleep 0.5
-  play :e4, amp: 3
-  sleep 0.5
-  play :b4, amp: 3
-  sleep 0.5
-  play :e4, amp: 3
-  sleep 0.5
-  play :b4, amp: 3
-  sleep 0.5
-  play :e4, amp: 3
-  sleep 0.5
-  play :b4, amp: 3
-  sleep 0.5
-  play :e4, amp: 3
-  sleep 0.5
+use_synth :organ_tonewheel
+
+live_loop :seperateWays do
+  16.times do
+    play(seperateWays[i])
+    sleep 0.5
+    i = i + 1
+    print i
+  end
+  i = 0
 end
+
+
 
 sleep 16
 
 live_loop :cymbal do
-  sample :bass_trance_c, amp: 2
-  sleep 4
+  sample :bass_trance_c
+  sleep(sleepChange[i])
+  i = i + 1
+  print i
+  i = 0
 end
+
 
 sleep 16
 
@@ -127,9 +48,9 @@ end
 
 sleep 16
 
-live_loop :hey do
-  sample "C:/Users/Drew_Borneman/Documents/Audacity/11 SOUND EFFECTS (High Quality) - RBTrapHipHopRapRemixDubstep - Popular in 2020.wav", amp: 4, rate: -1, beat_stretch: 4
-  sleep 2
+live_loop :horns do
+  sample horns
+  sleep 8
 end
 
 
