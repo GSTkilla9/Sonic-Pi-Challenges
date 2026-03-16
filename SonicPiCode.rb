@@ -1,8 +1,8 @@
-
 horns = "C:/Users/Drew_Borneman/Documents/Audacity/All Quiet on the Western Front (2022) OST - Remains [Extended].wav"
 
 seperateWays = [:e5,:e4,:b4,:e4,:f5,:e4,:b4,:e4,:g5,:e4,:b4,:e4,:b4,:e4,:b4,:e4,]
 sleepChange = [3,2,1,4,]
+sleepChange2 = [2,2,1,0.25,0.25,]
 i = 0
 
 
@@ -21,6 +21,7 @@ end
 
 
 
+
 sleep 16
 
 live_loop :cymbal do
@@ -35,8 +36,11 @@ end
 sleep 16
 
 live_loop :bass do
-  sample :drum_bass_hard, amp: 3
-  sleep 2
+  sample :drum_bass_hard
+  sleep(sleepChange2[i])
+  i = i + 1
+  print i
+  i = 0
 end
 
 sleep 16
@@ -48,10 +52,12 @@ end
 
 sleep 16
 
-live_loop :horns do
+8.times do
   sample horns
   sleep 8
 end
+stop
 
 
 
+sample :bass_trance_c
