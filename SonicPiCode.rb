@@ -56,8 +56,22 @@ sleep 16
   sample horns
   sleep 8
 end
+
+sleep 8
+
+x = 1
+
+4. times do
+  sample :bass_trance_c, amp: 1
+  sleep 1
+  sample :bass_trance_c, amp: 0.75
+  sleep 1
+  sample :bass_trance_c, amp: 0.5
+  sleep 1
+  sample :bass_trance_c, amp: 0.25
+  sleep 1
+  
+  
+  x = x - 0.25
+end
 stop
-
-
-
-sample :bass_trance_c
