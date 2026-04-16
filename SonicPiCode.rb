@@ -28,38 +28,48 @@ end
   sample vocals
 end
 
-
 sleep 16
 
+
 live_loop :cymbal do
-  sample :bass_trance_c, amp: 2
-  sleep(sleepChange[i])
-  i = i + 1
-  print i
-  i = 0
+  50.times do
+    sample :bass_trance_c, amp: 2
+    sleep(sleepChange[i])
+    i = i + 1
+    print i
+    i = 0
+  end
+  stop
 end
+
 
 sleep 16
 
 live_loop :bass do
-  sample :drum_bass_hard, amp: 3
-  sleep(sleepChange2[i])
-  i = i + 1
-  print i
-  i = 0
+  20.times do
+    sample :drum_bass_hard, amp: 3
+    sleep(sleepChange2[i])
+    i = i + 1
+    print i
+    i = 0
+  end
+  stop
 end
 
 sleep 16
 
-define :dub do
-  sample :ambi_choir, amp: 4
-  sleep 4
-  i = i + 1
-  print i
-  i = 0
+live_loop :dub do
+  30.times do
+    sample :ambi_choir, amp: 4
+    sleep 4
+    i = i + 1
+    print i
+    i = 0
+  end
+  stop
 end
 
-sleep 16
+sleep 64
 
 4.times do
   x = 1
