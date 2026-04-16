@@ -1,3 +1,5 @@
+vocals ="C:/Users/Drew_Borneman/Documents/Audacity/Journey - Dont Stop Believin (Vocals Only).wav"
+
 dontstopBelievin = [:e4,:f4,:e4,:c4]
 sleepChange = [4.5,4.5,4.5,4.5,1.5,]
 i = 0
