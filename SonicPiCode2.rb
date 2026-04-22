@@ -6,6 +6,22 @@ i = 0
 
 use_bpm 118
 
+
+
+define :changing_notes do |n1, n2, n3, n4,|
+  play n1
+  sleep 0.5
+  play n2
+  sleep 0.5
+  play n3
+  sleep 0.5
+  play n4
+  
+  sleep 2.5
+end
+
+
+
 1.times do
   x = 0
   
@@ -32,48 +48,24 @@ end
 
 sleep 2
 
+
+
 live_loop :notes do
   use_synth :piano
-  play :e2
-  sleep 0.5
-  play :f2
-  sleep 0.5
-  play :g2
-  sleep 0.5
-  play :b2
-  
-  sleep 2.5
-  
-  play :b2
-  sleep 0.5
-  play :c3
-  sleep 0.5
-  play :d3
-  sleep 0.5
-  play :c3
-  
-  sleep 2.5
-  
-  play :c3
-  sleep 0.5
-  play :d3
-  sleep 0.5
-  play :e3
-  sleep 0.5
-  play :a2
-  
-  sleep 2.5
-  
-  play :a2
-  sleep 0.5
-  play :d3
-  sleep 0.5
-  play :e3
-  
-  sleep 3
+  changing_notes :e2,:f2,:g2,:b2
+  changing_notes :b2,:c3,:d3,:c3
+  changing_notes :c3,:d3,:e3,:a2
+  changing_notes :a2,:d3,:e3,:r
 end
 
+
+
+
 sleep 30
+
+8.times do
+  sample vocals, rate: 1
+end
 
 live_loop :bass do
   sample :drum_cymbal_hard
@@ -81,7 +73,6 @@ live_loop :bass do
 end
 
 sleep 16
-
 
 live_loop :choir do
   sample :bass_thick_c
