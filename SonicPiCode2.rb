@@ -16,7 +16,7 @@ define :changing_notes do |n1, n2, n3, n4,|
   play n3
   sleep 0.5
   play n4
-  
+
   sleep 2.5
 end
 
