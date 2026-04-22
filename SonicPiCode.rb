@@ -62,15 +62,14 @@ live_loop :dub do
   end
 end
 
-sleep 10
-
+sleep 5
 
 4.times do
   x = 1
   
   4.times do
     sample :bass_trance_c, amp: x
-    sleep 1
+    sleep 2
     x = x - 0.25
   end
 end
