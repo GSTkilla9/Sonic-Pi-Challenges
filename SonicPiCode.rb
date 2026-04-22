@@ -6,7 +6,6 @@ sleepChange = [3,2,1,4,]
 sleepChange2 = [2,2,1,0.25,0.25,]
 i = 0
 
-
 use_bpm 131
 
 live_loop :intro do
@@ -23,13 +22,11 @@ live_loop :intro do
   stop
 end
 
-
 8.times do
   sample vocals
 end
 
 sleep 16
-
 
 live_loop :cymbal do
   50.times do
@@ -41,7 +38,6 @@ live_loop :cymbal do
   end
   stop
 end
-
 
 sleep 16
 
@@ -66,10 +62,9 @@ live_loop :dub do
     print i
     i = 0
   end
-  stop
 end
 
-sleep 64
+sleep 10
 
 
 4.times do
@@ -81,4 +76,3 @@ sleep 64
     x = x - 0.25
   end
 end
-stop
