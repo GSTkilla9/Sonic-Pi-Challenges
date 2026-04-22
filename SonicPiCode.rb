@@ -1,7 +1,5 @@
 vocals = "C:/Users/Drew_Borneman/Documents/Audacity/Journey - Separate Ways (Worlds Apart) (Vocals Only).wav"
-vocals2="C:/Users/Drew_Borneman/Documents/Audacity/Journey - Dont Stop Believin (Vocals Only).wav"
 seperateWays = [:e5,:e4,:b4,:e4,:f5,:e4,:b4,:e4,:g5,:e4,:b4,:e4,:b4,:e4,:b4,:e4,]
-dontstopBelievin = [:e4,:f4,:e4,:c4]
 sleepChange = [3,2,1,4,]
 sleepChange2 = [2,2,1,0.25,0.25,]
 i = 0
