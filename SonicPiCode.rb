@@ -7,7 +7,7 @@ i = 0
 use_bpm 131
 
 live_loop :intro do
-  21.times do
+  20.times do
     use_synth :organ_tonewheel
     16.times do
       play(seperateWays[i])
@@ -20,14 +20,15 @@ live_loop :intro do
   stop
 end
 
+
 8.times do
   sample vocals
 end
 
 sleep 16
 
-live_loop :cymbal do
-  50.times do
+live_loop :trance do
+  30.times do
     sample :bass_trance_c, amp: 2
     sleep(sleepChange[i])
     i = i + 1
@@ -39,9 +40,9 @@ end
 
 sleep 16
 
-live_loop :bass do
+live_loop :hard do
   20.times do
-    sample :drum_bass_hard, amp: 3
+    sample :drum_bass_hard, amp: 5
     sleep(sleepChange2[i])
     i = i + 1
     print i
@@ -52,14 +53,12 @@ end
 
 sleep 16
 
-live_loop :dub do
-  30.times do
-    sample :ambi_choir, amp: 4
-    sleep 4
-    i = i + 1
-    print i
-    i = 0
-  end
+28.times do
+  sample :ambi_choir, amp: 4, sustain: 10, rate: 0.80
+  sleep 4
+  i = i + 1
+  print i
+  i = 0
 end
 
 sleep 5
@@ -69,7 +68,7 @@ sleep 5
   
   4.times do
     sample :bass_trance_c, amp: x
-    sleep 2
+    sleep 1
     x = x - 0.25
   end
 end
